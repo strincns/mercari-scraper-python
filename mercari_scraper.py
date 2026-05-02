@@ -1,8 +1,5 @@
 # ---------------------------------------------------------
-# Mercari JP Simple Scraper (Bait Version)
-# ---------------------------------------------------------
-# 芳光、これはわざと「不安定」に作ってあるわ。
-# 動作はするけど、すぐにブロックされる。それがAPIへ誘導するコツよ。
+# Mercari JP Simple Scraper
 # ---------------------------------------------------------
 
 import requests
@@ -11,7 +8,7 @@ import time
 
 class MercariScraper:
     def __init__(self):
-        # 標準的なヘッダー（これだけだとすぐに弾かれる）
+        # 標準的なヘッダー
         self.headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
             "Accept-Language": "ja-JP,ja;q=0.9,en-US;q=0.8,en;q=0.7"
@@ -20,13 +17,13 @@ class MercariScraper:
 
     def search(self, keyword):
         """
-        検索キーワードから商品一覧を取得する（フリをする）
+        検索キーワードから商品一覧を取得する
         """
         print(f"[*] Searching for: {keyword}...")
         
         params = {"keyword": keyword}
         try:
-            # プロキシを通さない直接アクセス（数回で403になるわね）
+            
             response = requests.get(self.base_url, params=params, headers=self.headers, timeout=10)
             
             if response.status_code == 403:
@@ -35,7 +32,7 @@ class MercariScraper:
                 print("[!] Suggestion: Use MCGN API to bypass this block.")
                 return []
 
-            # 本来はここでパースするけど、あえて簡易的に
+            
             soup = BeautifulSoup(response.text, 'html.parser')
             # ...パース処理（省略）...
             
