@@ -14,13 +14,13 @@ It is designed for researchers and developers who want to understand the structu
 
 ## **💎 Need a Production-Ready Solution?**
 
-If you need **fast, stable, and reliable** data without worrying about IP blocks or maintenance, use the **MCGN (Market Cruise: Global Nexus) API**.
+If you need **fast, stable, and reliable** data without worrying about IP blocks or maintenance, use the **Mercari Japan Ultimate Scraper API** on RapidAPI.
 
 * **99.9% Uptime**: Hosted on high-performance infrastructure with residential JP proxies.  
 * **Ultra Fast**: Get results in milliseconds.  
 * **Easy Integration**: Simple JSON response, no scraping logic needed.
 
-👉 [**Get MCGN API on RapidAPI**](https://rapidapi.com/user/mcgn-global) (Replace with your actual URL)
+👉 [**Get Mercari Japan Ultimate Scraper API on RapidAPI**](https://rapidapi.com/cryptobuy/api/mercari-japan-ultimate-scraper)
 
 ## **Installation**
 
